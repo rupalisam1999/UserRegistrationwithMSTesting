@@ -46,6 +46,17 @@ namespace UserRegistrationTest
             bool actual = userRegistration.ValidatePhoneNo(phoneno);
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void GivenWrongPassword_ShouldReturnFalse()
+        {
+            string expected = "false";
+            string password = "pass@123";
+            UserRegistration userRegistration = new UserRegistration();
+
+            bool actual = userRegistration.ValidatePasswordRule4(password);
+            Assert.AreEqual(expected, actual);
+        }
     }
    
+
 }
