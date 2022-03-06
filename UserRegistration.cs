@@ -11,6 +11,7 @@ namespace UserRegistrationWithMSTesting
     {
         const string FIRST_NAME_PATTERN = "^[A-Z]{1}[a-z]{3,}$";
         const string LAST_NAME_PATTERN = "^[A-Z]{1}[a-z]{3,}$";
+        const string EMAIL_PATTERN = "^[a-z]{2,}[.]{1}[a-z]{3,}[@][a-z]{2,}[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}$";
 
         public bool ValidateFirstName(string firrstName)
         {
@@ -27,6 +28,18 @@ namespace UserRegistrationWithMSTesting
         public bool ValidateLatName(string LastName)
         {
             var result = Regex.Match(LastName, LAST_NAME_PATTERN);
+            if (result.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool ValidateEmail(string email)
+        {
+            var result = Regex.Match(email, EMAIL_PATTERN);
             if (result.Success)
             {
                 return true;

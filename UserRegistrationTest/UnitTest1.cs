@@ -26,5 +26,17 @@ namespace UserRegistrationTest
             bool actual = userRegistration.ValidateLatName(lastName);
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void GivenWrongEmail_ShouldReturnFalse()
+        {
+            string expected = "false";
+            string email = "San.abc@gmail.com";
+            UserRegistration userRegistration = new UserRegistration();
+
+            bool actual = userRegistration.ValidateEmail(email);
+            Assert.AreEqual(expected, actual);
+        }
+
     }
+   
 }
