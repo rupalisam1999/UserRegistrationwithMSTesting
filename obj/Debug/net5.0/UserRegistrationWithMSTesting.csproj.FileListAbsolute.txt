@@ -1,0 +1,16 @@
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\UserRegistrationWithMSTesting.exe
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\UserRegistrationWithMSTesting.deps.json
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\UserRegistrationWithMSTesting.runtimeconfig.json
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\UserRegistrationWithMSTesting.runtimeconfig.dev.json
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\UserRegistrationWithMSTesting.dll
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\ref\UserRegistrationWithMSTesting.dll
+C:\Users\hp\source\UserRegistrationWithMSTesting\bin\Debug\net5.0\UserRegistrationWithMSTesting.pdb
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.csproj.AssemblyReference.cache
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.AssemblyInfoInputs.cache
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.AssemblyInfo.cs
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.dll
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\ref\UserRegistrationWithMSTesting.dll
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.pdb
+C:\Users\hp\source\UserRegistrationWithMSTesting\obj\Debug\net5.0\UserRegistrationWithMSTesting.genruntimeconfig.cache
