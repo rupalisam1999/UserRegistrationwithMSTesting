@@ -36,7 +36,16 @@ namespace UserRegistrationTest
             bool actual = userRegistration.ValidateEmail(email);
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void GivenWrongPhoneNo_ShouldReturnFalse()
+        {
+            string expected = "false";
+            string phoneno = "91 9112674814";
+            UserRegistration userRegistration = new UserRegistration();
 
+            bool actual = userRegistration.ValidatePhoneNo(phoneno);
+            Assert.AreEqual(expected, actual);
+        }
     }
    
 }
