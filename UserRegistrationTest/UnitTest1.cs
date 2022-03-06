@@ -16,5 +16,15 @@ namespace UserRegistrationTest
             bool actual = userRegistration.ValidateFirstName(firstName);
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void GivenWrongLastName_ShouldReturnFalse()
+        {
+            string expected = "false";
+            string lastName = "Sangale";
+            UserRegistration userRegistration = new UserRegistration();
+
+            bool actual = userRegistration.ValidateLatName(lastName);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
