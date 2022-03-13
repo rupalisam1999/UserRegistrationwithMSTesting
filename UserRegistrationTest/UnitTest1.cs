@@ -7,56 +7,85 @@ namespace UserRegistrationTest
     public class UnitTest1
     {
         [TestMethod]
-        public void GivenWrongFirstName_ShouldReturnFalse()
+       
+        [DataRow("Happy")]
+        public void GivenMessage_WhenHappy_ReturnEntrySucessfulForFirstName(string message)
         {
-            string expected = "false";
-            string firstName = "Rupali";
-            UserRegistration userRegistration = new UserRegistration();
-        
-            bool actual = userRegistration.ValidateFirstName(firstName);
-            Assert.AreEqual(expected, actual);
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForFirstName();
+            Assert.AreEqual(expected, "Entry is successful");
         }
         [TestMethod]
-        public void GivenWrongLastName_ShouldReturnFalse()
+        [DataRow("Sad")]
+        public void GivenMessage_WhenSad_ReturnEntryUnSucessfulForFirstName(string message)
         {
-            string expected = "false";
-            string lastName = "Sangale";
-            UserRegistration userRegistration = new UserRegistration();
-
-            bool actual = userRegistration.ValidateLatName(lastName);
-            Assert.AreEqual(expected, actual);
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForFirstName();
+            Assert.AreEqual(expected, "Entry is not successful");
         }
         [TestMethod]
-        public void GivenWrongEmail_ShouldReturnFalse()
+        [DataRow("Happy")]
+        public void GivenMessage_WhenHappy_ReturnEntrySucessfulForLastName(string message)
         {
-            string expected = "false";
-            string email = "San.abc@gmail.com";
-            UserRegistration userRegistration = new UserRegistration();
-
-            bool actual = userRegistration.ValidateEmail(email);
-            Assert.AreEqual(expected, actual);
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForLastName();
+            Assert.AreEqual(expected, "Entry is successful");
         }
         [TestMethod]
-        public void GivenWrongPhoneNo_ShouldReturnFalse()
+        [DataRow("Sad")]
+        public void GivenMessage_WhenSad_ReturnEntryUnSucessfulForLastName(string message)
         {
-            string expected = "false";
-            string phoneno = "91 9112674814";
-            UserRegistration userRegistration = new UserRegistration();
-
-            bool actual = userRegistration.ValidatePhoneNo(phoneno);
-            Assert.AreEqual(expected, actual);
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForLastName();
+            Assert.AreEqual(expected, "Entry is not successful");
         }
         [TestMethod]
-        public void GivenWrongPassword_ShouldReturnFalse()
+        [DataRow("Happy")]
+        public void GivenMessage_WhenHappy_ReturnEntrySucessfulForEmail(string message)
         {
-            string expected = "false";
-            string password = "pass@123";
-            UserRegistration userRegistration = new UserRegistration();
-
-            bool actual = userRegistration.ValidatePasswordRule4(password);
-            Assert.AreEqual(expected, actual);
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForEmail();
+            Assert.AreEqual(expected, "Entry is successful");
+        }
+        [TestMethod]
+        [DataRow("Sad")]
+        public void GivenMessage_WhenSad_ReturnEntryUnSucessfulForEmail(string message)
+        {
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForEmail();
+            Assert.AreEqual(expected, "Entry is not successful");
+        }
+        [TestMethod]
+        [DataRow("Happy")]
+        public void GivenMessage_WhenHappy_ReturnEntrySucessfulForMobile(string message)
+        {
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForMobile();
+            Assert.AreEqual(expected, "Entry is successful");
+        }
+        [TestMethod]
+        [DataRow("Sad")]
+        public void GivenMessage_WhenSad_ReturnEntryUnSucessfulForMobile(string message)
+        {
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForMobile();
+            Assert.AreEqual(expected, "Entry is not successful");
+        }
+        [TestMethod]
+        [DataRow("Happy")]
+        public void GivenMessage_WhenHappy_ReturnEntrySucessfulForPassword(string message)
+        {
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForPassword();
+            Assert.AreEqual(expected, "Entry is successful");
+        }
+        [TestMethod]
+        [DataRow("Sad")]
+        public void GivenMessage_WhenSad_ReturnEntryUnSucessfulForPassword(string message)
+        {
+            CheckUserRegistration userRegistration = new CheckUserRegistration(message);
+            string expected = userRegistration.checkForPassword();
+            Assert.AreEqual(expected, "Entry is not successful");
         }
     }
-   
-
 }
