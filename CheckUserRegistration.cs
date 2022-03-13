@@ -15,6 +15,10 @@ namespace UserRegistrationWithMSTesting
             this.message = message;
         }
 
+        public CheckUserRegistration()
+        {
+        }
+
         public string checkForFirstName()
         {
             if (message.Contains("Happy"))
@@ -50,7 +54,22 @@ namespace UserRegistrationWithMSTesting
             else
                 return "Entry is not successful";
         }
+
+        public string checkMultipleEntriesOfEmail(string email1, string email2, string email3, string email4)
+        {
+            UserRegistration userRegistration = new UserRegistration();
+            bool emailForEntry1 = userRegistration.ValidateEmail(email1);
+            bool emailForEntry2 = userRegistration.ValidateEmail(email2);
+            bool emailForEntry3 = userRegistration.ValidateEmail(email3);
+            bool emailForEntry4 = userRegistration.ValidateEmail(email4);
+            if (emailForEntry1 && emailForEntry2 && emailForEntry3 && emailForEntry4)
+                return "Entry is successful";
+            else
+                return "Entry is not successful";
+        }
     }
 }
+    
+
     
 

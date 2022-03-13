@@ -21,6 +21,10 @@ namespace UserRegistrationWithMSTesting
             this.message = message;
         }
 
+        public UserRegistration()
+        {
+        }
+
         public bool ValidateFirstName(string firrstName)
         {
             var result = Regex.Match(firrstName, FIRST_NAME_PATTERN);
