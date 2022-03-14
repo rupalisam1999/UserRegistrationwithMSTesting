@@ -11,9 +11,9 @@ namespace UserRegistrationWithMSTesting
     {
         const string FIRST_NAME_PATTERN = "^[A-Z]{1}[a-z]{3,}$";
         const string LAST_NAME_PATTERN = "^[A-Z]{1}[a-z]{3,}$";
-        const string EMAIL_PATTERN = "^[a-z]{2,}[.]{1}[a-z]{3,}[@][a-z]{2,}[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}$";
-        const string PHONE_NO_PATTERN = "^[1-9]{2}[ *][6-9]{1}[1-9]{9}$";
-        const string PASSWORD_PATTERN = "^[A-Z]{1}[a-z]{3,}[#]{1}[1-9]{1,}$";
+        const string EMAIL_PATTERN = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z0-9]{2,6}$";
+        const string PHONE_NO_PATTERN = "^[0-9]{2}[ ][0-9]{10}$";
+        const string PASSWORD_PATTERN = "^(?=.*[A-Z])(?=.*[@#$%&*!_.-=])(?=.*[0-9])[a-zA-Z0-9].{8,}$";
         private string message;
 
         public UserRegistration(string message)
@@ -86,6 +86,12 @@ namespace UserRegistrationWithMSTesting
                 return false;
             }
         }
+
+        public Func<string, bool> isValidFirstName = firstName => Regex.IsMatch(firstName, FIRST_NAME_PATTERN);
+        public Func<string, bool> isValidLastName = lastName => Regex.IsMatch(lastName, LAST_NAME_PATTERN);
+        public Func<string, bool> isValidEmail = email => Regex.IsMatch(email, EMAIL_PATTERN);
+        public Func<string, bool> isValidMobileNumber = mobileFormat => Regex.IsMatch(mobileFormat, PHONE_NO_PATTERN);
+        public Func<string, bool> isValidPassword = preDefinedPassword => Regex.IsMatch(preDefinedPassword, PASSWORD_PATTERN);
 
     }
 }
